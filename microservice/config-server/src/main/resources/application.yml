@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+      config:
+        server:
+          git:
+            uri: https://github.com/DDFrank/SpringCloudConfig
+            searchPaths: respo
+            # 私有仓库的话需要填写
+            username:
+            password:
+        label: master
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+

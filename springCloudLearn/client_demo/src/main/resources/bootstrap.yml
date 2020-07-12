@@ -1,0 +1,30 @@
+spring:
+  application:
+    # 该服务的名字
+    name: eurekaClient
+  profiles:
+    active: dev
+  cloud:
+    config:
+      # 指定配置环境 取名类似 config-dev
+      profile: dev
+      # 指定配置文件名字，多个的话以英文逗号隔开
+      name: eurekaClient
+      # git 仓库分支名
+      label: master
+      discovery:
+        enabled: true
+        # 配置中心的服务名
+        serviceId: config
+  # rabbitMq的配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    serviceUrl:
+      # 指定注册中心的地址
+      default: http://localhost:8761/eureka/

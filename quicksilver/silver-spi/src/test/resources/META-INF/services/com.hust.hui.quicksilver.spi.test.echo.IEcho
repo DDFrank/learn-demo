@@ -1,0 +1,4 @@
+com.hust.hui.quicksilver.spi.test.echo.ConsoleEcho
+com.hust.hui.quicksilver.spi.test.echo.CsvEcho
+com.hust.hui.quicksilver.spi.test.echo.ExcelEcho
+com.hust.hui.quicksilver.spi.test.echo.FileEcho

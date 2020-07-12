@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.7.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>io.frank</groupId>
+	<artifactId>spring-jooq</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>spring-jooq</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<common.version>2.1.0</common.version>
+		<java.version>1.8</java.version>
+		<jooq.version>3.12.3</jooq.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jooq</artifactId>
+			<version>2.0.7.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jooq</groupId>
+			<artifactId>jooq-meta</artifactId>
+			<version>${jooq.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.48</version>
+		</dependency>
+		<dependency>
+			<groupId>com.delicloud.platform.v2</groupId>
+			<artifactId>common-lang</artifactId>
+			<version>${common.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.9</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.jooq</groupId>
+				<artifactId>jooq-codegen-maven</artifactId>
+				<version>${jooq.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>5.1.48</version>
+					</dependency>
+				</dependencies>
+
+				<configuration>
+					<jdbc>
+						<driver>com.mysql.jdbc.Driver</driver>
+						<url>jdbc:mysql://192.168.0.206:3306/patrol?useSsl=false</url>
+						<user>cloudapp</user>
+						<password>cloudapp@123</password>
+					</jdbc>
+					<generator>
+						<database>
+							<name>org.jooq.meta.mysql.MySQLDatabase</name>
+							<inputSchema>patrol</inputSchema>
+						</database>
+						<generate>
+							<javaTimeTypes>true</javaTimeTypes>
+						</generate>
+						<target>
+							<packageName>io.frank.spring.jooq.entity</packageName>
+							<directory>target/generated-sources/jooq</directory>
+						</target>
+					</generator>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

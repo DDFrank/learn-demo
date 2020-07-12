@@ -1,0 +1,14 @@
+
+eureka:
+  client:
+    serviceUrl:
+      # 指定注册中心的地址
+      default: http://localhost:8761/eureka/
+
+server:
+  port: 8762
+spring:
+  application:
+    # 该服务的名字
+    name: eurekaClient
+

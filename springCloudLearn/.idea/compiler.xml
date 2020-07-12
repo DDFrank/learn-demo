@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="client2demo" />
+        <module name="client_demo" />
+        <module name="config_demo" />
+        <module name="feign_demo" />
+        <module name="gateway_demo" />
+        <module name="server_demo" />
+        <module name="zipkin_demo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="client2demo" target="1.6" />
+      <module name="client_demo" target="1.6" />
+      <module name="config_demo" target="1.6" />
+      <module name="feign_demo" target="1.6" />
+      <module name="gateway_demo" target="1.6" />
+      <module name="server_demo" target="1.6" />
+      <module name="springCloudLearn" target="1.6" />
+      <module name="zipkin_demo" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

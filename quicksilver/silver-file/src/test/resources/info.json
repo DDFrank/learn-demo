@@ -1,0 +1,17 @@
+{
+  "user": {
+    "name": [
+      "yihui",
+      "一灰"
+    ],
+    "info": {
+      "sex": "男",
+      "age": 26
+    }
+  },
+  "address": {
+    "phone": null,
+    "qq": true,
+    "email": {}
+  }
+}

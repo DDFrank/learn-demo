@@ -1,0 +1,23 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: config
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        # 配置文件的git地址
+        git:
+          uri: https://github.com/DDFrank/SpringCloudConfig.git
+          username: DDFrank
+          password: zhaoxiaojing1
+        label: master
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ipAddress}
+    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

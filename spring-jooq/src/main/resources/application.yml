@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://192.168.0.206:3306/patrol?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
+    username: cloudapp
+    password: cloudapp@123
+    driverClassName: com.mysql.jdbc.Driver
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSql
+    useGlobalDataSourceStat: true
+server:
+  undertow:
+    io-threads: 4
+    worker-threads: 32
+    buffer-size: 1024
+    direct-buffers: true
+  port: 9621

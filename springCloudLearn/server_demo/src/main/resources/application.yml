@@ -1,0 +1,22 @@
+server:
+  port: 8761
+
+spring:
+  profiles:
+    active: dev
+
+eureka:
+  server:
+    # 是否开启自我保护,默认true.假如为true，当客户端宕机时，注册中心不会删的该服务
+    enable-self_preservation: false
+  instance:
+    # 是否以 IP 注册到注册中心。默认是以 hostname 来注册的
+    preferIpAddress: true
+    hostname: ${spring.cloud.client.ipAddress}
+    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      # 注册中心的默认地址
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

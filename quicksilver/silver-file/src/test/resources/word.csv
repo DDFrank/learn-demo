@@ -1,0 +1,6 @@
+dicId,"name",rootWord,weight
+1,"质量",true,0.1
+2,"服务",true,0.2
+3,"发货",,0.1
+4,"性价比",false,0.4
+5,"尺码",true,0.4

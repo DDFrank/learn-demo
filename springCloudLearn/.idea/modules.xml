@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/client2demo/client2demo.iml" filepath="$PROJECT_DIR$/client2demo/client2demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client_demo/client_demo.iml" filepath="$PROJECT_DIR$/client_demo/client_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config_demo/config_demo.iml" filepath="$PROJECT_DIR$/config_demo/config_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feign_demo/feign_demo.iml" filepath="$PROJECT_DIR$/feign_demo/feign_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway_demo/gateway_demo.iml" filepath="$PROJECT_DIR$/gateway_demo/gateway_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server_demo/server_demo.iml" filepath="$PROJECT_DIR$/server_demo/server_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springCloudLearn.iml" filepath="$PROJECT_DIR$/springCloudLearn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zipkin_demo/zipkin_demo.iml" filepath="$PROJECT_DIR$/zipkin_demo/zipkin_demo.iml" />
+    </modules>
+  </component>
+</project>
